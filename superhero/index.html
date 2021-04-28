@@ -36,8 +36,10 @@
                                 Hero Facts
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Wolverine</a></li>
-                                <li><a class="dropdown-item" href="#">Spider-Man</a></li>
+                                <li><a class="dropdown-item" href="#" data-bs-toggle="modal"
+                                       data-bs-target="#wolverineModal">Wolverine</a></li>
+                                <li><a class="dropdown-item" href="#" data-bs-toggle="modal"
+                                       data-bs-target="#spidermanModal">Spider-Man</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
@@ -51,6 +53,42 @@
                 </div>
             </div>
         </nav>
+        <!-- Wolverine Modal -->
+        <div class="modal fade" id="wolverineModal" tabindex="-1" aria-labelledby="wolverineModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="wolverineModalLabel">Wolverine Fact</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Wolverine made his first comic book appearance in 1974.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Spider-Man Modal -->
+        <div class="modal fade" id="spidermanModal" tabindex="-1" aria-labelledby="spidermanModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="spidermanModalLabel">Spider-Man Fact</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Spider-Man was created by Stan Lee and Steve Ditko and first appeared in 1962.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
