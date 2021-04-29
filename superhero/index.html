@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -91,7 +92,6 @@
         </div>
     </div>
 </div>
-
 <div class="container-fluid">
     <div style="text-align:center">
         <h1>
@@ -116,7 +116,7 @@
     </div>
     <div class="row justify-content-md-center">
         <div class="col-9">
-            <ul class="list-group">
+            <ul class="list-group" id="hero-list">
                 <li class="list-group-item">Wolverine</li>
                 <li class="list-group-item">Iron Man</li>
                 <li class="list-group-item">Deadpool</li>
@@ -124,7 +124,7 @@
                 <li class="list-group-item">Spider-Man</li>
             </ul>
             <hr>
-            <form>
+            <form id="addHero-form">
                 <div class="form-group">
                     <label for="heroInput">ADD A SUPERHERO</label>
                     <input type="text" class="form-control" id="heroInput" placeholder="Enter Hero">
@@ -208,8 +208,9 @@
         </div>
     </div>
 </div>
-
 <!-- Optional JavaScript; choose one of the two! -->
+
+<script src="./js/script.js"></script>
 
 <!-- Option 1: Bootstrap Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
