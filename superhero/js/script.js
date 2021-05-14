@@ -16,6 +16,10 @@ $('#vote-form').submit(function (event) {
     var movie3Votes = $('#movieVotes3').text();
     var movie4Votes = $('#movieVotes4').text();
     var movie5Votes = $('#movieVotes5').text();
+
+    $('#vote-form').addClass('hide');
+    $('#vote-alert').removeClass('hide');
+
     if($('#heroMovieRadio1').is(':checked')) {
         movie1Votes = parseInt(movie1Votes) + 1;
         $('#movieVotes1').text(movie1Votes);
