@@ -38,3 +38,15 @@ $('#vote-form').submit(function (event) {
     }
     event.preventDefault();
 });
+
+$('#search-form').submit(function (event) {
+    if($('#search-box').val() == '') {
+
+    } else if ($('#search-box').val().toLowerCase() == 'wolverine') {
+        alert('Wolverine is awesome!');
+    } else {
+        alert('Your search for ' + $('#search-box').val() + ' returned 0 results. Try something else.');
+    }
+    event.preventDefault();
+});
+
