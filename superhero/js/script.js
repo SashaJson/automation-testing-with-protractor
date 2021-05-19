@@ -20,19 +20,19 @@ $('#vote-form').submit(function (event) {
     $('#vote-form').addClass('hide');
     $('#vote-alert').removeClass('hide');
 
-    if($('#heroMovieRadio1').is(':checked')) {
+    if ($('#heroMovieRadio1').is(':checked')) {
         movie1Votes = parseInt(movie1Votes) + 1;
         $('#movieVotes1').text(movie1Votes);
-    } else if($('#heroMovieRadio2').is(':checked')) {
+    } else if ($('#heroMovieRadio2').is(':checked')) {
         movie2Votes = parseInt(movie2Votes) + 1;
         $('#movieVotes2').text(movie2Votes);
-    } else if($('#heroMovieRadio3').is(':checked')) {
+    } else if ($('#heroMovieRadio3').is(':checked')) {
         movie3Votes = parseInt(movie3Votes) + 1;
         $('#movieVotes3').text(movie3Votes);
-    } else if($('#heroMovieRadio4').is(':checked')) {
+    } else if ($('#heroMovieRadio4').is(':checked')) {
         movie4Votes = parseInt(movie4Votes) + 1;
         $('#movieVotes4').text(movie4Votes);
-    } else if($('#heroMovieRadio5').is(':checked')) {
+    } else if ($('#heroMovieRadio5').is(':checked')) {
         movie5Votes = parseInt(movie5Votes) + 1;
         $('#movieVotes5').text(movie5Votes);
     }
@@ -40,8 +40,7 @@ $('#vote-form').submit(function (event) {
 });
 
 $('#search-form').submit(function (event) {
-    if($('#search-box').val() == '') {
-
+    if ($('#search-box').val() == '') {
     } else if ($('#search-box').val().toLowerCase() == 'wolverine') {
         alert('Wolverine is awesome!');
     } else {
@@ -50,3 +49,25 @@ $('#search-form').submit(function (event) {
     event.preventDefault();
 });
 
+$('#form-login').submit(function (event) {
+    $('#login-alert').addClass('hide');
+    if ($('#loginEmail').val() == '' || $('#loginPassword').val() == '') {
+        $('#login-alert').removeClass('hide');
+    } else {
+        if ($('#rememberLoginCheck').is(':checked')) {
+            var email = $('#loginEmail').text();
+            var password = $('#loginPassword').text();
+        } else {
+            $('#loginEmail').val('');
+            $('#loginPassword').val('')
+        }
+        $('#overlay').addClass('hide');
+    }
+    event.preventDefault();
+});
+
+function logout() {
+    $('#overlay').removeClass('hide');
+    $('#loginEmail').val(email);
+    $('#loginPassword').val(password);
+}

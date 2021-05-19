@@ -38,6 +38,9 @@
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
+            <div class="alert alert-danger hide" role="alert" id="login-alert">
+                An email and password are required.
+            </div>
         </div>
     </div>
 </div>
@@ -72,7 +75,7 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Logout</a>
+                            <a class="nav-link" href="#" tabindex="-1" aria-disabled="true" onclick="logout()">Logout</a>
                         </li>
                     </ul>
                     <form class="d-flex" id="search-form">
