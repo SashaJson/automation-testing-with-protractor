@@ -1,0 +1,28 @@
+{
+  "name": "automation-test-with-protractor",
+  "version": "1.0.0",
+  "description": "automation simple app with Protractor",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SashaJson/automation-testing-with-protractor.git"
+  },
+  "keywords": [
+    "qa",
+    "automation",
+    "protractor",
+    "testing"
+  ],
+  "author": "Sasha Shulha (sashamiller666@gmail.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SashaJson/automation-testing-with-protractor/issues"
+  },
+  "homepage": "https://github.com/SashaJson/automation-testing-with-protractor#readme",
+  "dependencies": {
+    "protractor": "^7.0.0"
+  }
+}
