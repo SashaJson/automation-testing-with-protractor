@@ -17,6 +17,26 @@ describe('Login page Tests', () => {
 
     });
 
+    it('should display all login page elements', () => {
+
+    });
+
+    it('should display error message when no username and password entered', () => {
+
+    });
+
+    it('should display error message when no password entered', () => {
+
+    });
+
+    it('should display error message when no username entered', () => {
+
+    });
+
+    it('should log user in ', () => {
+
+    });
+
     it('', () => {
 
     });
