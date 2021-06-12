@@ -9,7 +9,6 @@ describe('Login page Tests', () => {
         loginPage = new LoginPage();
         // Since this is not an Angular Site
         browser.ignoreSynchronization = true;
-        // Open URL
         browser.get('../../superhero/index.html');
     });
 
@@ -19,26 +18,42 @@ describe('Login page Tests', () => {
 
     it('should display all login page elements', () => {
 
-    });
+        expect(loginPage.loginTitleTxt.isDisplayed()).toBe(true);
 
-    it('should display error message when no username and password entered', () => {
+        expect(loginPage.emailFildLabel.isDisplayed()).toBe(true);
+        expect(loginPage.emailFild.isDisplayed()).toBe(true);
+        expect(loginPage.emailFild.getText()).toEqual('');
 
-    });
+        expect(loginPage.passwordFildLabel.isDisplayed()).toBe(true);
+        expect(loginPage.passwordFild.isDisplayed()).toBe(true);
+        expect(loginPage.passwordFild.getText()).toEqual('');
 
-    it('should display error message when no password entered', () => {
+        expect(loginPage.rememberCheckLabel.isDisplayed()).toBe(true);
+        expect(loginPage.rememberCheck.isDisplayed()).toBe(true);
+        expect(loginPage.rememberCheck.isSelected()).toBe(false);
 
-    });
-
-    it('should display error message when no username entered', () => {
-
-    });
-
-    it('should log user in ', () => {
-
-    });
-
-    it('', () => {
+        expect(loginPage.submitButton.isDisplayed()).toBe(true);
 
     });
+
+    // it('should display error message when no email and password entered', () => {
+    //
+    // });
+    //
+    // it('should display error message when no password entered', () => {
+    //
+    // });
+    //
+    // it('should display error message when no email entered', () => {
+    //
+    // });
+    //
+    // it('should log user in ', () => {
+    //
+    // });
+    //
+    // it('', () => {
+    //
+    // });
 
 });
