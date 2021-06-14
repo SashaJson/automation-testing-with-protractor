@@ -36,10 +36,15 @@ describe('Login page Tests', () => {
 
     });
 
-    // it('should display error message when no email and password entered', () => {
-    //
-    // });
-    //
+    it('should display error message when no email and password entered', () => {
+
+        loginPage.submitButton.click();
+
+        expect(loginPage.loginErrorMessage.isDisplayed()).toBe(true);
+        expect(loginPage.loginErrorMessage.getText()).toEqual('An e-mail and password are required.');
+
+    });
+
     // it('should display error message when no password entered', () => {
     //
     // });
