@@ -19,6 +19,7 @@ describe('Login page Tests', () => {
     it('should display all login page elements', () => {
 
         expect(loginPage.loginTitleTxt.isDisplayed()).toBe(true);
+        expect(loginPage.loginTitleTxt.getText()).toEqual('Welcome. Please Log In.');
 
         expect(loginPage.emailFildLabel.isDisplayed()).toBe(true);
         expect(loginPage.emailFild.isDisplayed()).toBe(true);
@@ -41,24 +42,38 @@ describe('Login page Tests', () => {
         loginPage.submitButton.click();
 
         expect(loginPage.loginErrorMessage.isDisplayed()).toBe(true);
-        expect(loginPage.loginErrorMessage.getText()).toEqual('An e-mail and password are required.');
+        expect(loginPage.loginErrorMessage.getText()).toEqual('An email and password are required.');
 
     });
 
-    // it('should display error message when no password entered', () => {
-    //
-    // });
-    //
-    // it('should display error message when no email entered', () => {
-    //
-    // });
-    //
-    // it('should log user in ', () => {
-    //
-    // });
-    //
-    // it('', () => {
-    //
-    // });
+    it('should display error message when no password entered', () => {
+
+        loginPage.emailFild.sendKeys('testsashajson@testjson.com');
+        loginPage.submitButton.click();
+
+        expect(loginPage.loginErrorMessage.isDisplayed()).toBe(true);
+        expect(loginPage.loginErrorMessage.getText()).toEqual('An email and password are required.');
+
+    });
+
+    it('should display error message when no email entered', () => {
+
+        loginPage.passwordFild.sendKeys('fakepassword');
+        loginPage.submitButton.click();
+
+        expect(loginPage.loginErrorMessage.isDisplayed()).toBe(true);
+        expect(loginPage.loginErrorMessage.getText()).toEqual('An email and password are required.');
+
+    });
+
+    it('should log user in ', () => {
+
+        loginPage.emailFild.sendKeys('testsashajson@testjson.com');
+        loginPage.passwordFild.sendKeys('fakepassword');
+        loginPage.submitButton.click();
+
+        // TODO - Verify page elements changed
+
+    });
 
 });
