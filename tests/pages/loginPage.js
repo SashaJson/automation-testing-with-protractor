@@ -8,7 +8,7 @@ LoginPage.prototype = Object.create({}, {
     passwordFild: { get: () => element(by.id('loginPassword')) },
     rememberCheckLabel: { get: () => element(by.css('#form-login > div.form-check > label')) },
     rememberCheck: { get: () => element(by.id('rememberLoginCheck')) },
-    submitButton: { get: () => element(by.buttonText('Submit')) },
+    submitButton: { get: () => element(by.css('#form-login > button')) },
     loginErrorMessage: { get: () => element(by.id('login-alert')) }
 });
 
