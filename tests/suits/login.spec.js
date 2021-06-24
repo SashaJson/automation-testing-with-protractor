@@ -1,3 +1,4 @@
+'use strict';
 
 const LoginPage = require('../pages/loginPage');
 
