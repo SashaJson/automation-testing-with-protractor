@@ -7,7 +7,8 @@ exports.config = {
         // chromeOptions: { args: ["--disable-dev-shm-usage", '--no-sandbox'] }
     },
     specs: [
-        './suits/*.js'
+        './suits/login.spec.js',
+        './suits/roster.spec.js'
     ],
     jasmineNodeOpts: {
         showColors: true
