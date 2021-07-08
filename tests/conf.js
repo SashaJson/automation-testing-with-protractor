@@ -8,7 +8,8 @@ exports.config = {
     },
     specs: [
         './suits/login.spec.js',
-        './suits/roster.spec.js'
+        './suits/roster.spec.js',
+        './suits/vote.spec.js'
     ],
     jasmineNodeOpts: {
         showColors: true
