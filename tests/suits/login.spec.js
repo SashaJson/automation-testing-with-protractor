@@ -22,13 +22,13 @@ describe('Login page Tests', () => {
         expect(loginPage.loginTitleTxt.isDisplayed()).toBe(true);
         expect(loginPage.loginTitleTxt.getText()).toEqual('Welcome. Please Log In.');
 
-        expect(loginPage.emailFildLabel.isDisplayed()).toBe(true);
-        expect(loginPage.emailFild.isDisplayed()).toBe(true);
-        expect(loginPage.emailFild.getText()).toEqual('');
+        expect(loginPage.emailFieldLabel.isDisplayed()).toBe(true);
+        expect(loginPage.emailField.isDisplayed()).toBe(true);
+        expect(loginPage.emailField.getText()).toEqual('');
 
-        expect(loginPage.passwordFildLabel.isDisplayed()).toBe(true);
-        expect(loginPage.passwordFild.isDisplayed()).toBe(true);
-        expect(loginPage.passwordFild.getText()).toEqual('');
+        expect(loginPage.passwordFieldLabel.isDisplayed()).toBe(true);
+        expect(loginPage.passwordField.isDisplayed()).toBe(true);
+        expect(loginPage.passwordField.getText()).toEqual('');
 
         expect(loginPage.rememberCheckLabel.isDisplayed()).toBe(true);
         expect(loginPage.rememberCheck.isDisplayed()).toBe(true);
@@ -49,7 +49,7 @@ describe('Login page Tests', () => {
 
     it('should display error message when no password entered', () => {
 
-        loginPage.emailFild.sendKeys('testsashajson@testjson.com');
+        loginPage.emailField.sendKeys('testsashajson@testjson.com');
         loginPage.submitButton.click();
 
         expect(loginPage.loginErrorMessage.isDisplayed()).toBe(true);
@@ -59,7 +59,7 @@ describe('Login page Tests', () => {
 
     it('should display error message when no email entered', () => {
 
-        loginPage.passwordFild.sendKeys('fakepassword');
+        loginPage.passwordField.sendKeys('fakepassword');
         loginPage.submitButton.click();
 
         expect(loginPage.loginErrorMessage.isDisplayed()).toBe(true);
@@ -69,8 +69,8 @@ describe('Login page Tests', () => {
 
     it('should log user in ', () => {
 
-        loginPage.emailFild.sendKeys('testsashajson@testjson.com');
-        loginPage.passwordFild.sendKeys('fakepassword');
+        loginPage.emailField.sendKeys('testsashajson@testjson.com');
+        loginPage.passwordField.sendKeys('fakepassword');
         loginPage.submitButton.click();
 
         // TODO - Verify page elements changed
