@@ -4,12 +4,20 @@ const VotePage = function () {};
 
 VotePage.prototype = Object.create({}, {
     voteTitleText: { get: () => element(by.css('body > div.container-fluid > div:nth-child(6) > div > h4')) },
-    xmenChoiceRad: { get: () => element(by.css('#vote-form > div:nth-child(1) > label')) },
-    avengersChoiceRad: { get: () => element(by.css('#vote-form > div:nth-child(2) > label')) },
-    deadPoolChoiceRad: { get: () => element(by.css('#vote-form > div:nth-child(3) > label')) },
-    spiderManChoiceRad: { get: () => element(by.css('#vote-form > div:nth-child(4) > label')) },
-    ironManChoiceRad: { get: () => element(by.css('#vote-form > div:nth-child(5) > label')) },
+    xmenChoiceRadLabel: { get: () => element(by.css('#vote-form > div:nth-child(1) > label')) },
+    avengersChoiceRadLabel: { get: () => element(by.css('#vote-form > div:nth-child(2) > label')) },
+    deadPoolChoiceRadLabel: { get: () => element(by.css('#vote-form > div:nth-child(3) > label')) },
+    spiderManChoiceRadLabel: { get: () => element(by.css('#vote-form > div:nth-child(4) > label')) },
+    ironManChoiceRadLabel: { get: () => element(by.css('#vote-form > div:nth-child(5) > label')) },
     submitButton: { get: () => element(by.css('#vote-form > button')) },
+
+    xmenChoiceRad: { get: () => element(by.id('heroMovieRadio1')) },
+    avengersChoiceRad: { get: () => element(by.id('heroMovieRadio2')) },
+    deadPoolChoiceRad: { get: () => element(by.id('heroMovieRadio3')) },
+    spiderManChoiceRad: { get: () => element(by.id('heroMovieRadio4')) },
+    ironManChoiceRad: { get: () => element(by.id('heroMovieRadio5')) },
+
+    voteFormSection: { get: () => element(by.id('vote-form')) },
 
     movieLabel: { get: () => element(by.css('body > div.container-fluid > div:nth-child(6) > div > table > thead > tr > th:nth-child(1)')) },
     voteLabel: { get: () => element(by.css('body > div.container-fluid > div:nth-child(6) > div > table > thead > tr > th:nth-child(2)')) },
@@ -22,7 +30,10 @@ VotePage.prototype = Object.create({}, {
     spiderManLabel: { get: () => element(by.id('movieName4')) },
     spiderManValue: { get: () => element(by.id('movieVotes4')) },
     ironManLabel: { get: () => element(by.id('movieName5')) },
-    ironManValue: { get: () => element(by.id('movieVotes5')) }
+    ironManValue: { get: () => element(by.id('movieVotes5')) },
+
+    thanksAlertText: { get: () => element(by.id('vote-alert')) }
+
 });
 
 module.exports = VotePage;
