@@ -1,14 +1,22 @@
 'use strict';
 
 const HeaderPage = require('../pages/headerPage');
+const LoginPage = require('../pages/loginPage');
 
 describe('Header Page', () => {
     let headerPage;
+    let loginPage;
 
     beforeEach(() => {
         headerPage = new HeaderPage();
+        loginPage = new LoginPage();
+
         browser.ignoreSynchronization = true;
         browser.get('../../superhero/index.html');
+
+        loginPage.emailField.sendKeys('testsashajson@testjson.com');
+        loginPage.passwordField.sendKeys('fakepassword');
+        loginPage.submitButton.click();
     });
 
     afterEach(() => {
