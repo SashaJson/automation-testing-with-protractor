@@ -19,10 +19,6 @@ describe('Header Page', () => {
         loginPage.submitButton.click();
     });
 
-    afterEach(() => {
-
-    });
-
     it('should contain all Header elements', () => {
 
         expect(headerPage.headerTitle.isDisplayed()).toBe(true);

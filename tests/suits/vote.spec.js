@@ -20,10 +20,6 @@ describe('Vote Page', () => {
         loginPage.submitButton.click();
     });
 
-    afterEach(() => {
-
-    });
-
     it('should display all elements for voting section', () => {
 
         expect(votePage.voteTitleText.isDisplayed()).toBe(true);

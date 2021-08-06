@@ -21,10 +21,6 @@ describe('Roster Page', () => {
 
     });
 
-    afterEach(() => {
-
-    });
-
     it('should display all default roster elements', () => {
 
         expect(rosterPage.rosterTitleText.isDisplayed()).toBe(true);

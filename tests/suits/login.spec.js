@@ -13,10 +13,6 @@ describe('Login page Tests', () => {
         browser.get('../../superhero/index.html');
     });
 
-    afterEach(() => {
-
-    });
-
     it('should display all login page elements', () => {
 
         expect(loginPage.loginTitleTxt.isDisplayed()).toBe(true);
