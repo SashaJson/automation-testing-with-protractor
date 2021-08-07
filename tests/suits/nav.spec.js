@@ -31,4 +31,44 @@ describe('', () => {
 
     });
 
+    it('should display and close wolverine modal', () => {
+
+        navPage.heroFactLink.click();
+        navPage.wolverineOption.click();
+
+        browser.sleep(2000);
+
+        expect(navPage.wolverineModalTitle.isPresent()).toBeTruthy();
+        expect(navPage.wolverineModalTitle.getText()).toEqual('Wolverine Fact');
+
+        expect(navPage.wolverineModalBody.isPresent()).toBeTruthy();
+        expect(navPage.wolverineModalBody.getText()).toEqual('Wolverine made his first comic book appearance in 1974');
+
+        expect(navPage.wolverineModalCloseButton.isPresent()).toBeTruthy();
+        expect(navPage.wolverineModalXButton.isDisplayed()).toBe(true);
+
+        navPage.wolverineModalCloseButton.click();
+
+    });
+
+    it('should display and close Spider - Man modal', () => {
+
+        navPage.heroFactLink.click();
+        navPage.wolverineOption.click();
+
+        browser.sleep(2000);
+
+        expect(navPage.spiderManModalTitle.isPresent()).toBeTruthy();
+        expect(navPage.spiderManModalTitle.getText()).toEqual('Wolverine Fact');
+
+        expect(navPage.spiderManModalBody.isPresent()).toBeTruthy();
+        expect(navPage.spiderManModalBody.getText()).toEqual('Wolverine made his first comic book appearance in 1974');
+
+        expect(navPage.spiderManModalCloseButton.isPresent()).toBeTruthy();
+        expect(navPage.spiderManModalXButton.isDisplayed()).toBe(true);
+
+        navPage.spiderManModalCloseButton.click();
+
+    });
+
 });
