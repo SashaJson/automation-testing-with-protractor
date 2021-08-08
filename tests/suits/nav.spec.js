@@ -71,4 +71,26 @@ describe('', () => {
 
     });
 
+    it('should display Login page without email and password', () => {
+
+        navPage.logOutLink.click();
+
+        expect(loginPage.emailField.getText()).toEqual('');
+        expect(loginPage.passwordField.getText()).toEqual('');
+
+    });
+
+    it('should display Login page with email and password', () => {
+
+        loginPage.rememberCheck.click();
+        loginPage.submitButton.click();
+
+        navPage.logOutLink.click();
+
+        expect(loginPage.emailField.getAttribute('value')).toEqual('testsashajson@testjson.com');
+        expect(loginPage.passwordField.getAttribute('value')).toEqual('fakepassword');
+        expect(loginPage.rememberCheck.isSelected()).toBe(true);
+
+    });
+
 });
