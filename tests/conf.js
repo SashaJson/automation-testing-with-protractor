@@ -1,4 +1,12 @@
 const SpecReporter = require('jasmine-spec-reporter').SpecReporter;
+const HtmlScreenshotReporter = require('protractor-jasmine2-screenshot-reporter');
+
+const reporter = new HtmlScreenshotReporter({
+    dest: 'target/screenshots',
+    filename: 'my-report.html',
+    reportTitle: 'Superhero Test Result',
+    reportOnlyFailedSpecs: false
+});
 
 exports.config = {
     framework: 'jasmine',
@@ -9,7 +17,7 @@ exports.config = {
         // chromeOptions: { args: ["--disable-dev-shm-usage", '--no-sandbox'] }
     },
     specs: [
-        './suits/*.spec.js'
+        './suits/login.spec.js'
     ],
     jasmineNodeOpts: {
         showColors: true,
@@ -19,8 +27,23 @@ exports.config = {
 
         }
     },
+
+    beforeLaunch: function () {
+      return new Promise(function (resolve) {
+         reporter.beforeLaunch(resolve);
+      });
+    },
+
+    afterLaunch: function (exitCode) {
+        return new Promise(function (resolve) {
+            reporter.afterLaunch(resolve.bind(this, exitCode));
+        });
+    },
+
     logLevel: 'WARN',
     onPrepare: function () {
+        jasmine.getEnv().addReporter(reporter);
+
         jasmine.getEnv().addReporter(new SpecReporter({
             spec: {
                 displayStacktrace: true

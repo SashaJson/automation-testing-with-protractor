@@ -26,6 +26,7 @@
   },
   "devDependencies": {
     "install": "^0.13.0",
-    "jasmine-spec-reporter": "^7.0.0"
+    "jasmine-spec-reporter": "^7.0.0",
+    "protractor-jasmine2-screenshot-reporter": "^0.5.0"
   }
 }
