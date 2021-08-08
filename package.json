@@ -23,5 +23,9 @@
   "homepage": "https://github.com/SashaJson/automation-testing-with-protractor#readme",
   "dependencies": {
     "protractor": "^7.0.0"
+  },
+  "devDependencies": {
+    "install": "^0.13.0",
+    "jasmine-spec-reporter": "^7.0.0"
   }
 }

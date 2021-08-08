@@ -1,3 +1,5 @@
+const SpecReporter = require('jasmine-spec-reporter').SpecReporter;
+
 exports.config = {
     framework: 'jasmine',
     // directConnect: true,
@@ -7,11 +9,25 @@ exports.config = {
         // chromeOptions: { args: ["--disable-dev-shm-usage", '--no-sandbox'] }
     },
     specs: [
-        './suits/login.spec.js',
-        './suits/roster.spec.js',
-        './suits/vote.spec.js'
+        './suits/*.spec.js'
     ],
     jasmineNodeOpts: {
-        showColors: true
+        showColors: true,
+        silent: true,
+        defaultTimeoutInterval: 360000,
+        print: function () {
+
+        }
+    },
+    logLevel: 'WARN',
+    onPrepare: function () {
+        jasmine.getEnv().addReporter(new SpecReporter({
+            spec: {
+                displayStacktrace: true
+            },
+            summary: {
+                displayDuration: false
+            }
+        }));
     }
 }
