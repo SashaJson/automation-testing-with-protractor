@@ -93,4 +93,36 @@ describe('', () => {
 
     });
 
+    it('should display alert for not found', () => {
+
+        loginPage.rememberCheck.click();
+        loginPage.submitButton.click();
+
+        navPage.searchField.sendKeys('Sasha');
+        navPage.searchButton.click();
+
+        const EC = protractor.ExpectedConditions;
+        browser.wait(EC.alertIsPresent(), 3000);
+
+        expect(browser.switchTo().alert().getText()).toEqual('Your search for Sasha returned 0 result. Try something else.');
+        browser.switchTo().alert().accept();
+
+    });
+
+    it('should display alert for found', () => {
+
+        loginPage.rememberCheck.click();
+        loginPage.submitButton.click();
+
+        navPage.searchField.sendKeys('Wolverine');
+        navPage.searchButton.click();
+
+        const EC = protractor.ExpectedConditions;
+        browser.wait(EC.alertIsPresent(), 3000);
+
+        expect(browser.switchTo().alert().getText()).toEqual('Wolverine is awesome!');
+        browser.switchTo().alert().accept();
+
+    });
+
 });
