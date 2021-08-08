@@ -17,7 +17,10 @@ NavPage.prototype = Object.create({}, {
     spiderManModalTitle: { get: () => element(by.id('spidermanModalLabel')) },
     spiderManModalBody: { get: () => element(by.css('#spidermanModal > div > div > div.modal-body')) },
     spiderManModalXButton: { get: () => element(by.css('#spidermanModal > div > div > div.modal-header > button > span')) },
-    spiderManModalCloseButton: { get: () => element(by.css('#spidermanModal > div > div > div.modal-footer > button')) }
+    spiderManModalCloseButton: { get: () => element(by.css('#spidermanModal > div > div > div.modal-footer > button')) },
+
+    searchField: { get: () => element(by.id('search-box')) },
+    searchButton: { get: () => element(by.buttonText('Search')) },
 
 });
 
